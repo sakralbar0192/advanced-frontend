@@ -1,15 +1,17 @@
-import { useTranslation } from "react-i18next"
-import { Button, ButtonTheme } from "shared/ui/Button/Button"
+import { type ReactElement } from 'react'
+import { useTranslation } from 'react-i18next'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 
-export const LanguageSwitcher = () => {
-    const {t, i18n} = useTranslation()
+export const LanguageSwitcher = (): ReactElement => {
+    const { t, i18n } = useTranslation()
 
-    const toggle = () => {
-        i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
+    const toggle = (): void => {
+        void i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
     }
 
-    return(
-        <Button 
+    return (
+        <Button
+            className=''
             onClick={toggle}
             theme={ButtonTheme.CLEAR}
         >

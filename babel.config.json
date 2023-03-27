@@ -2,6 +2,5 @@
     "presets": ["@babel/preset-env"],
     "plugins": [
         "i18next-extract"
-    ],
-    "extends": "plugin:react/jsx-runtime"
+    ]
 }
