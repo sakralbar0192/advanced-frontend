@@ -1,4 +1,4 @@
-import { ClassNames } from 'shared/lib/ClassNames'
+import { ClassNames } from 'shared/lib/classNames/classNames'
 import cls from './Navbar.module.scss'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 import type { ReactElement } from 'react'
