@@ -4,12 +4,16 @@ import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'app/providers/ThemeProvider'
 
 import './shared/config/i18next/i18next'
+import { ErrorBoundary } from 'app/providers/ErrorBoundary'
+import { ErrorPage } from 'pages/ErrorPage'
 
 render(
-    <BrowserRouter>
-        <ThemeProvider>
-            <App />
-        </ThemeProvider>
-    </BrowserRouter>,
+    <ErrorBoundary fallback={<ErrorPage />}>
+        <BrowserRouter>
+            <ThemeProvider>
+                <App />
+            </ThemeProvider>
+        </BrowserRouter>
+    </ErrorBoundary>,
     document.getElementById('root')
 )

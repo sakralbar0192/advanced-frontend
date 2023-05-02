@@ -4,6 +4,7 @@ import cls from './SideBar.module.scss'
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 import { LanguageSwitcher } from 'widgets/LanguageSwitcher/ui/LanguageSwitcher'
 import { useTranslation } from 'react-i18next'
+import { ErrorThrowingButton } from 'widgets/ErrorThrowingButton/ui/ErrorThrowingButton'
 
 export const SideBar = (): ReactElement => {
     const [collapsed, setCollapsed] = useState(false)
@@ -22,6 +23,7 @@ export const SideBar = (): ReactElement => {
                 <ThemeSwitcher />
                 <LanguageSwitcher />
             </div>
+            <ErrorThrowingButton />
         </div>
     )
 }
