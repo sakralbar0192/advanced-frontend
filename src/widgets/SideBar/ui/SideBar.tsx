@@ -15,8 +15,13 @@ export const SideBar = (): ReactElement => {
     }
 
     return (
-        <div className={ClassNames(cls.SideBar, { [cls.collapsed]: collapsed })}>
-            <button onClick={onToggle}>
+        <div
+            data-testid='sidebar'
+            className={ClassNames(cls.SideBar, { [cls.collapsed]: collapsed })}
+        >
+            <button
+                data-testid='toggle'
+                onClick={onToggle}>
                 {t('Свернуть')}
             </button>
             <div className={cls.switcher}>

@@ -17,6 +17,7 @@
     "plugins": [
         "react"
     ],
+    "ignorePatterns": ["jest.config.ts", "webpack.config.ts", "i18nextTest.ts"],
     "rules": {
         "indent": [2, 4],
         "@typescript-eslint/indent": [2, 4],

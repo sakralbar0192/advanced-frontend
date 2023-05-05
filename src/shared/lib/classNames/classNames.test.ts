@@ -1,4 +1,4 @@
-import { ClassNames } from './classNames'
+import { ClassNames } from 'shared/lib/classNames/classNames'
 
 describe('classNames', () => {
     test('only classes', () => {
@@ -11,7 +11,7 @@ describe('classNames', () => {
         expect(ClassNames('class1 class2', { first: true, last: false })).toBe(expected)
     })
 
-    test('classes whith additional', () => {
+    test('classes with additional', () => {
         const expected = 'class1 class2 additional'
         expect(ClassNames('class1 class2', {}, ['additional'])).toBe(expected)
     })
