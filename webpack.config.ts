@@ -1,7 +1,7 @@
 import path from 'path'
 import { BuildModes, type BuildEnv, type BuildPaths } from './config/types/config'
 import { buildWebpackConfig } from './config/buildWebpackConfig'
-import { type Configuration } from 'mini-css-extract-plugin'
+import { Configuration } from 'webpack'
 
 export default (env: BuildEnv): Configuration => {
     const buildPaths: BuildPaths = {

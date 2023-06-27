@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 
-export const ErrorPage: FC = () => {
+export const PageError: FC = () => {
     return (
         <div>
             <h1>Sorry, something went wrong...</h1>

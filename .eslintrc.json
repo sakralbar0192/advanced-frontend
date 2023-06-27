@@ -5,25 +5,45 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "standard-with-typescript"
+        "standard-with-typescript",
+        "plugin:storybook/recommended"
     ],
-    "overrides": [
-    ],
+    "overrides": [],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
-        "project": ["tsconfig.json"]
+        "project": [
+            "tsconfig.json"
+        ]
     },
     "plugins": [
         "react"
     ],
-    "ignorePatterns": ["jest.config.ts", "webpack.config.ts", "i18nextTest.ts"],
+    "ignorePatterns": [
+        "jest.config.ts",
+        "webpack.config.ts",
+        "i18nextTest.ts"
+    ],
     "rules": {
-        "indent": [2, 4],
-        "@typescript-eslint/indent": [2, 4],
+        "indent": [
+            2,
+            4
+        ],
+        "@typescript-eslint/indent": [
+            2,
+            4
+        ],
         "@typescript-eslint/prefer-nullish-coalescing": "warn",
         "space-before-function-paren": "off",
         "@typescript-eslint/space-before-function-paren": "off",
         "react/react-in-jsx-scope": 0
+    },
+    "settings": {
+        "react": {
+            "createClass": "createReactClass",
+            "pragma": "React",
+            "fragment": "Fragment",
+            "version": "detect"
+        }
     }
 }
