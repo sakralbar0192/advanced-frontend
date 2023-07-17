@@ -5,7 +5,7 @@ export const ErrorThrowingButton: FC = () => {
     const [error, setError] = useState(false)
 
     useEffect(() => {
-        if (error) throw new Error()
+        if (error) throw new Error('Error!')
     }, [error])
 
     const onThrow = (): void => {
