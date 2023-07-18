@@ -20,5 +20,8 @@
         "compilerOptions": {
             "module": "CommonJS"
         }
-    }
+    },
+    "exclude": [
+        "./loki.config.js"
+    ]
 }
