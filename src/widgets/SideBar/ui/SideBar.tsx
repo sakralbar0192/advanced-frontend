@@ -3,12 +3,10 @@ import { ClassNames } from 'shared/lib/classNames/classNames'
 import cls from './SideBar.module.scss'
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 import { LanguageSwitcher } from 'widgets/LanguageSwitcher/ui/LanguageSwitcher'
-import { useTranslation } from 'react-i18next'
-import { ErrorThrowingButton } from 'widgets/ErrorThrowingButton/ui/ErrorThrowingButton'
+import { ButtonTheme, Button } from 'shared/ui/Button'
 
 export const SideBar = (): ReactElement => {
     const [collapsed, setCollapsed] = useState(false)
-    const { t } = useTranslation('sideBar')
 
     const onToggle = (): void => {
         setCollapsed(!collapsed)
@@ -19,16 +17,19 @@ export const SideBar = (): ReactElement => {
             data-testid='sidebar'
             className={ClassNames(cls.SideBar, { [cls.collapsed]: collapsed })}
         >
-            <button
+            <Button
                 data-testid='toggle'
-                onClick={onToggle}>
-                {t('Свернуть')}
-            </button>
+                onClick={onToggle}
+                className={cls.collapseBtn}
+                theme={ ButtonTheme.BACKGROUND_INVERTED}
+                square
+            >
+                { collapsed ? '>' : '<' }
+            </Button>
             <div className={cls.switcher}>
                 <ThemeSwitcher />
                 <LanguageSwitcher />
             </div>
-            <ErrorThrowingButton />
         </div>
     )
 }
