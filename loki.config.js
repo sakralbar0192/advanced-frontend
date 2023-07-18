@@ -1,6 +1,9 @@
 module.exports = {
     chromeSelector: "#storybook-root > *",
-    diffingEngine: 'looks-same',
+    diffingEngine: "pixelmatch",
+    pixelmatch: {
+        threshold: 0.5
+    },
     configurations: {
       'chrome.laptop': {
         target: 'chrome.app',
