@@ -9,10 +9,6 @@
     transition: width 0.3s
 }
 
-.collapsed {
-    width: var(--sidebar-width-collapsed);
-}
-
 .switcher {
     align-self: center;
     display: flex;
@@ -23,6 +19,46 @@
 
 .collapseBtn {
     position: absolute;
-    right: -40px;
-    bottom: 40px;
+    right: -32px;
+    bottom: 32px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 20px; 
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px;
+
+    svg {
+        margin: 0 10px 0 0;
+        fill: var(--inverted-primary-color)
+    }
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .switcher {
+        flex-direction: column;
+    }
+
+    .links {
+        align-items: center;
+        margin: 0;
+    }
+
+    .link {
+        span {
+            display: none;
+        }
+
+        svg {
+            margin: 0;
+        }
+    }
 }

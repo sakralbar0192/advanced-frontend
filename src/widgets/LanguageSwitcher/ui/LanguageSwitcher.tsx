@@ -1,8 +1,12 @@
-import { type ReactElement } from 'react'
+import { type FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonTheme } from 'shared/ui/Button'
 
-export const LanguageSwitcher = (): ReactElement => {
+interface LanguageSwitcherProps {
+    short?: boolean
+}
+
+export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ short = false }) => {
     const { t, i18n } = useTranslation()
 
     const toggle = (): void => {
@@ -15,7 +19,7 @@ export const LanguageSwitcher = (): ReactElement => {
             onClick={toggle}
             theme={ButtonTheme.CLEAR}
         >
-            {t('Перевод')}
+            {t(short ? 'Короткий перевод' : 'Перевод')}
         </Button>
     )
 }

@@ -1,43 +1,49 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { DarkThemeDecorator } from 'shared/lib/decorators/DarkThemeDecorator'
-import { Button, ButtonTheme } from './Button'
+import { Button, ButtonTheme, ButtonSize } from './Button'
 
 const meta = {
     title: 'shared/Button',
     component: Button,
-    tags: ['autodocs']
+    tags: ['autodocs'],
+    args: {
+        children: 'Ok',
+        theme: ButtonTheme.CLEAR,
+        size: ButtonSize.M,
+        square: false
+    },
+    argTypes: {
+        className: {
+            table: {
+                disable: true
+            }
+        },
+        children: {
+            control: 'text'
+        },
+        theme: {
+            options: [ButtonTheme.CLEAR, ButtonTheme.OUTLINE, ButtonTheme.BACKGROUND_INVERTED],
+            control: 'select'
+        },
+        square: {
+            control: 'boolean'
+        },
+        size: {
+            options: [ButtonSize.M, ButtonSize.L, ButtonSize.XL],
+            control: 'select',
+            defaultValue: {
+                summary: ButtonSize.M
+            }
+        }
+    }
 } satisfies Meta<typeof Button>
 
 export default meta
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj
 
-export const Primary: Story = {
-    args: {
-        children: 'text',
-        theme: ButtonTheme.CLEAR
-    }
-}
+export const LightTheme: Story = {}
 
-export const PrimaryDark: Story = {
-    args: {
-        children: 'text',
-        theme: ButtonTheme.CLEAR
-    },
-    decorators: [DarkThemeDecorator]
-}
-
-export const Outlined: Story = {
-    args: {
-        children: 'text',
-        theme: ButtonTheme.OUTLINE
-    }
-}
-
-export const OutlinedDark: Story = {
-    args: {
-        children: 'text',
-        theme: ButtonTheme.OUTLINE
-    },
+export const DarkTheme: Story = {
     decorators: [DarkThemeDecorator]
 }
