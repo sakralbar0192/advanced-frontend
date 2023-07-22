@@ -7,7 +7,7 @@ import { ButtonTheme, Button } from 'shared/ui/Button'
 import { ButtonSize } from 'shared/ui/Button/ui/Button'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 import { useTranslation } from 'react-i18next'
-import { RoutePaths } from 'shared/config/routeConfig/routeConfig'
+import { RoutePaths } from 'shared/configurations/routeConfig/routeConfig'
 import MainIcon from 'shared/assets/icons/home.svg'
 import AboutIcon from 'shared/assets/icons/about_page.svg'
 

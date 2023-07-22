@@ -2,7 +2,6 @@ import { type Preview } from '@storybook/react'
 import { LightThemeDecorator } from 'shared/lib/decorators/LightThemeDecorator'
 import { RouterDecorator } from 'shared/lib/decorators/RouterDecorator'
 import { StyleDecorator } from 'shared/lib/decorators/StyleDecorator'
-import { LokiDecorator } from './LokiDecorator'
 
 const preview: Preview = {
     parameters: {
@@ -15,7 +14,6 @@ const preview: Preview = {
         }
     },
     decorators: [
-        LokiDecorator,
         StyleDecorator,
         LightThemeDecorator,
         RouterDecorator

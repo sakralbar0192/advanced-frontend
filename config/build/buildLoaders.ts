@@ -1,6 +1,6 @@
 import type webpack from 'webpack'
-import { buildStyleLoader } from './build/buildStyleLoader'
-import { buildSvgLoader } from './build/buildSvgLoader'
+import { buildStyleLoader } from './buildStyleLoader'
+import { buildSvgLoader } from './buildSvgLoader'
 import { type BuildOptions } from './types/config'
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {

@@ -1,4 +1,4 @@
-import { BuildPaths } from "../types/config"
+import { BuildPaths } from "../build/types/config"
 import { Configuration, type RuleSetRule } from "webpack"
 import path from "path"
 import { buildStyleLoader } from "../build/buildStyleLoader"
