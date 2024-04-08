@@ -6,16 +6,16 @@ module.exports = {
     },
     configurations: {
       'chrome.laptop': {
-        target: 'chrome.app',
+        target: 'chrome.docker',
         width: 1366,
         height: 768,
       },
       'chrome.iphone7': {
-        target: 'chrome.app',
+        target: 'chrome.docker',
         preset: 'iPhone 7',
       },
       'chrome.a4': {
-        target: 'chrome.app',
+        target: 'chrome.docker',
         preset: 'A4 Paper',
       },
     },
