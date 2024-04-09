@@ -5,7 +5,6 @@ import { Button, ButtonTheme, ButtonSize } from './Button'
 const meta = {
     title: 'shared/Button',
     component: Button,
-    tags: ['autodocs'],
     args: {
         children: 'Ok',
         theme: ButtonTheme.CLEAR,
@@ -22,7 +21,7 @@ const meta = {
             control: 'text'
         },
         theme: {
-            options: [ButtonTheme.CLEAR, ButtonTheme.OUTLINE, ButtonTheme.BACKGROUND_INVERTED],
+            options: [ButtonTheme.CLEAR, ButtonTheme.OUTLINE, ButtonTheme.BACKGROUND_INVERTED, ButtonTheme.CLEAR_INVERTED],
             control: 'select'
         },
         square: {

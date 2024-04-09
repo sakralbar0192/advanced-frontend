@@ -67,6 +67,7 @@
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^5.1.0-canary-4c12339ce-20240408",
     "eslint-plugin-storybook": "^0.6.12",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",

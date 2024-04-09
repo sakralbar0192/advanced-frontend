@@ -7,11 +7,15 @@ const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) === null
 
 interface ThemeProviderProps {
     children: ReactElement
+    initialTheme?: Theme
 }
 
 const ThemeProvider = (props: ThemeProviderProps): ReactElement => {
-    const [theme, setTheme] = useState<Theme>(defaultTheme)
-
+    const {
+        children,
+        initialTheme
+    } = props
+    const [theme, setTheme] = useState<Theme>(initialTheme ?? defaultTheme)
     const defaultProps = useMemo(() => ({
         theme,
         setTheme
@@ -19,7 +23,7 @@ const ThemeProvider = (props: ThemeProviderProps): ReactElement => {
 
     return (
         <ThemeContext.Provider value={defaultProps}>
-            {props.children}
+            {children}
         </ThemeContext.Provider>
     )
 }

@@ -6,7 +6,8 @@
     "extends": [
         "plugin:react/recommended",
         "standard-with-typescript",
-        "plugin:storybook/recommended"
+        "plugin:storybook/recommended",
+        "plugin:react-hooks/recommended"
     ],
     "overrides": [],
     "parserOptions": {
@@ -17,7 +18,8 @@
         ]
     },
     "plugins": [
-        "react"
+        "react",
+        "react-hooks"
     ],
     "ignorePatterns": [
         "jest.config.ts",
@@ -36,7 +38,9 @@
         "@typescript-eslint/prefer-nullish-coalescing": "warn",
         "space-before-function-paren": "off",
         "@typescript-eslint/space-before-function-paren": "off",
-        "react/react-in-jsx-scope": 0
+        "react/react-in-jsx-scope": 0,
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
     },
     "settings": {
         "react": {
