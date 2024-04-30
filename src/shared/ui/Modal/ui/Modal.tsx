@@ -2,7 +2,6 @@ import { ClassNames } from 'shared/lib/classNames/classNames'
 import cls from './Modal.module.scss'
 import { type ReactNode, type FC, useState, useRef, useEffect, useCallback } from 'react'
 import { Portal } from 'shared/ui/Portal'
-import { UseTheme } from 'app/providers/ThemeProvider'
 
 interface ModalProps {
     children?: ReactNode
@@ -21,7 +20,6 @@ export const Modal: FC<ModalProps> = (props) => {
         onClose
     } = props
 
-    const { theme } = UseTheme()
     const [isClosing, setIsClosing] = useState(false)
     const timeoutRef = useRef<ReturnType<typeof setTimeout>>()
 
@@ -54,8 +52,7 @@ export const Modal: FC<ModalProps> = (props) => {
 
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
-        [cls.isClosing]: isClosing,
-        [cls[theme]]: true
+        [cls.isClosing]: isClosing
     }
 
     const contentClickHandler = (e: React.MouseEvent): void => {

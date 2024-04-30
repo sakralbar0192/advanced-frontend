@@ -1,4 +1,4 @@
-import { useMemo, useState, type ReactElement } from 'react'
+import { useLayoutEffect, useMemo, useState, type ReactElement } from 'react'
 import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from '../lib/ThemeContext'
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) === null
@@ -20,6 +20,10 @@ const ThemeProvider = (props: ThemeProviderProps): ReactElement => {
         theme,
         setTheme
     }), [theme])
+
+    useLayoutEffect(() => {
+        document.body.className = theme
+    })
 
     return (
         <ThemeContext.Provider value={defaultProps}>
