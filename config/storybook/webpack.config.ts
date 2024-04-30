@@ -12,8 +12,18 @@ export default ({ config }: { config: Configuration}) => {
         source: path.resolve(__dirname, '..', '..', 'src')
     }
 
-    config.resolve?.modules?.push(paths.source)
+    config.resolve?.modules?.push(paths.source, 'node_modules')
     config.resolve?.extensions?.push('.ts', '.tsx')
+    if (config.resolve) {
+        config.resolve.preferAbsolute = true;
+
+        if (config.resolve.alias) {
+            config.resolve.alias = {
+                ...config.resolve.alias,
+                entities: path.resolve(__dirname, '..', '..', 'src', 'entities')
+            }
+        }
+    }   
 
     if (config.module?.rules) {
         config.module.rules = config.module?.rules

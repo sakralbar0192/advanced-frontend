@@ -20,4 +20,8 @@ module.exports = {
       },
     },
     fetchFailIgnore: 'localhost:1234/get',
+    fileNameFormatter: ({ configurationName, kind, story, parameters }) => {
+      console.log(`${configurationName}/${kind} ${story}`.toLowerCase())
+      return `${configurationName}/${kind} ${story}`.toLowerCase()
+    }
   };
