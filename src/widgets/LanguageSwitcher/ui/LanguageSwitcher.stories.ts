@@ -4,8 +4,7 @@ import { LanguageSwitcher } from './LanguageSwitcher'
 
 const meta = {
     title: 'widgets/LanguageSwitcher',
-    component: LanguageSwitcher,
-    tags: ['autodocs']
+    component: LanguageSwitcher
 } satisfies Meta<typeof LanguageSwitcher>
 
 export default meta

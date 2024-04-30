@@ -4,8 +4,7 @@ import { AppLink, AppLinkTheme } from './AppLink'
 
 const meta = {
     title: 'shared/AppLink',
-    component: AppLink,
-    tags: ['autodocs']
+    component: AppLink
 } satisfies Meta<typeof AppLink>
 
 export default meta
