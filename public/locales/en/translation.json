@@ -1,4 +1,6 @@
 {
+    "decrement": "Decrement",
+    "increment": "Increment",
     "Тестовый пример": "Test example",
     "Перевод": "English",
     "Короткий перевод": "EN"
