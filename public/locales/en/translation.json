@@ -3,5 +3,8 @@
     "increment": "Increment",
     "Тестовый пример": "Test example",
     "Перевод": "English",
-    "Короткий перевод": "EN"
+    "Короткий перевод": "EN",
+    "Введите логин": "Input login",
+    "Введите пароль": "Input password",
+    "Войти": "Log in"
 }

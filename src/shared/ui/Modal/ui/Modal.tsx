@@ -7,6 +7,7 @@ interface ModalProps {
     children?: ReactNode
     className?: string
     isOpen: boolean
+    lazy?: boolean
     onClose?: () => void
 }
 
@@ -17,10 +18,12 @@ export const Modal: FC<ModalProps> = (props) => {
         className,
         children,
         isOpen,
+        lazy = false,
         onClose
     } = props
 
     const [isClosing, setIsClosing] = useState(false)
+    const [isMounted, setIsMounted] = useState(false)
     const timeoutRef = useRef<ReturnType<typeof setTimeout>>()
 
     const closeHandler = useCallback((): void => {
@@ -50,6 +53,10 @@ export const Modal: FC<ModalProps> = (props) => {
         }
     }, [isOpen, onKeyDownHandler])
 
+    useEffect(() => {
+        setIsMounted(isOpen)
+    }, [isOpen])
+
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing
@@ -57,6 +64,10 @@ export const Modal: FC<ModalProps> = (props) => {
 
     const contentClickHandler = (e: React.MouseEvent): void => {
         e.stopPropagation()
+    }
+
+    if (lazy && !isMounted) {
+        return null
     }
 
     return (
