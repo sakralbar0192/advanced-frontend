@@ -33,6 +33,9 @@ const meta = {
             defaultValue: {
                 summary: ButtonSize.M
             }
+        },
+        disabled: {
+            control: 'boolean'
         }
     }
 } satisfies Meta<typeof Button>

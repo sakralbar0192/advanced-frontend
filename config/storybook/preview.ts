@@ -1,6 +1,7 @@
 import { type Preview } from '@storybook/react'
 import { LightThemeDecorator } from 'shared/lib/decorators/LightThemeDecorator'
 import { RouterDecorator } from 'shared/lib/decorators/RouterDecorator'
+import { StoreDecorator } from 'shared/lib/decorators/StoreDecorator'
 import { StyleDecorator } from 'shared/lib/decorators/StyleDecorator'
 
 const preview: Preview = {
@@ -16,7 +17,8 @@ const preview: Preview = {
     decorators: [
         StyleDecorator,
         LightThemeDecorator,
-        RouterDecorator
+        RouterDecorator,
+        StoreDecorator
     ]
 }
 

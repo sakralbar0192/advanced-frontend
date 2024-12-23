@@ -2,11 +2,13 @@ import { type EnhancedStore, type ReducersMapObject, configureStore } from '@red
 import { type StateSchema } from './StateSchema'
 import { counterReducer as counter } from 'entities/Counter'
 import { userReducer as user } from 'entities/User'
+import { loginReducer as loginForm } from 'features/AuthByUserName'
 
 export function createReduxStore(initialState?: StateSchema): EnhancedStore {
     const reducer: ReducersMapObject<StateSchema> = {
         counter,
-        user
+        user,
+        loginForm
     }
 
     return configureStore({

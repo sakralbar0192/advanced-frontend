@@ -6,5 +6,7 @@
     "Короткий перевод": "EN",
     "Введите логин": "Input login",
     "Введите пароль": "Input password",
-    "Войти": "Log in"
+    "Войти": "Log in",
+    "Форма авторизации": "Authorization form",
+    "Неправильный логин или пароль": "Wrong login or password"
 }

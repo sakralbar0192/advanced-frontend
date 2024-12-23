@@ -6,6 +6,17 @@ const middlewares = jsonServer.defaults()
 const server = jsonServer.create()
 const router = jsonServer.router(path.resolve(__dirname, 'db.json'))
 server.use(jsonServer.bodyParser)
+const cors = require('cors');
+
+server.use(
+cors({
+origin: true,
+credentials: true,
+preflightContinue: false,
+methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+}),
+);
+server.options('*', cors());
 
 server.post('/login', (req, res) => {
   const { username, password } = req.body
